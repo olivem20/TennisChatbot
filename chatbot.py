@@ -20,7 +20,7 @@ pairs = [
     [r"(.*)", ["I'm sorry, I don't understand that. Can you rephrase?", "Could you please elaborate on that?"]],
     
     # Forehand
-    [r"how (.*) forehand", [
+    [r"(.*) how (.*) forehand (.*)", [
         "You can break the forehand down into 4 simple steps:\n "
         "1) Get your shoulders and feet sideways to the net\n"
         "2) Put your racket in your right hand and get it back abd below on the right side of your body\n"
@@ -35,7 +35,7 @@ pairs = [
     ]],
 
     # Backhand
-    [r"how (.*) backhand", [
+    [r"(.*) how (.*) backhand (.*)", [
         "Let's break down the backhand into simpler steps so it's easy to understand!:\n "
         "1) Get your shoulders and feet sideways to the net\n"
         "2) Hold the racket with your right hand like your shaking hands with it or hammering a nail\n"
@@ -46,7 +46,7 @@ pairs = [
     ]],
 
     # Serve
-    [r"how (.*) serve", [
+    [r"(.*) how (.*) serve (.*)", [
         "Serves are one of the hardest shots in tennis! For this serve, make sure you are holding the racket using a forehand grip." 
         "Here are some basic steps to start learning a serve:\n"
         "1) Face the net with your feet at shoulder width, standing an inch behind the baseline\n"
@@ -56,7 +56,14 @@ pairs = [
         "Congrats! You now know how to hit a beginner serve :)"
     ]],
 
-
+    # Volleys
+    [r"(.*) how (.*) (volley|volleys) (.*)", [
+        "To start learning volleys, lets keep it very simple!\n"
+        "For both volleys you want to keep a very short swing, it should almost feel like your punching the ball!\n"
+        "For a FH volley, keep your forehand grip and make a 90° angle with your right elbow. Kepp your eye on the ball and punch the ball towards your target.\n"
+        "For a BH volley, keep the same idea. Use your two handed backhand grips and punch the ball towards your target but letting your left hand guide the shot.\n"
+        "You now know how to hit volleys as a beginner!"
+    ]],
     
 ]
 
