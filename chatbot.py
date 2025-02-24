@@ -45,6 +45,18 @@ pairs = [
         "Congrats, now you know how to hit a basic backhand :)"
     ]],
 
+    # Serve
+    [r"how (.*) serve", [
+        "Serves are one of the hardest shots in tennis! For this serve, make sure you are holding the racket using a forehand grip." 
+        "Here are some basic steps to start learning a serve:\n"
+        "1) Face the net with your feet at shoulder width, standing an inch behind the baseline\n"
+        "2) Take a step back with your right foot and make sure you are balanced\n"
+        "3) Hold the ball in your left hand, and rest your racket up over your right shoulder\n"
+        "4) Toss the ball up in front of you, make contact at the highest point of your toss and follow through to your target!\n"
+        "Congrats! You now know how to hit a beginner serve :)"
+    ]],
+
+
     
 ]
 
