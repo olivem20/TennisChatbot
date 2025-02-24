@@ -9,7 +9,7 @@ nltk.download('averaged_perceptron_tagger')
 
 # Define patterns and responses
 pairs = [
-    [r"my name is (.*)", ["Hello %1, how can I assist you today?",]],
+    [r"my name is (.*)", ["Hello %1, how can I help you today?",]],
     [r"hi|hey|hello", ["Hello, how can I help you?", "Hey there! What can I do for you?", "Hi! How can I assist you today?"]],
     [r"what is your name?", ["I am a chatbot created to assist you. You can call me Chatbot.",]],
     [r"how are you?", ["I'm a bot, so I don't have feelings, but I'm here to help you!",]],
@@ -18,13 +18,34 @@ pairs = [
     [r"thank you|thanks", ["You're welcome!", "No problem!", "Happy to help!"]],
     [r"quit", ["Bye! Have a great day!", "Goodbye!"]],
     [r"(.*)", ["I'm sorry, I don't understand that. Can you rephrase?", "Could you please elaborate on that?"]],
+    
+    # Forehand
     [r"how (.*) forehand", [
         "You can break the forehand down into 4 simple steps:\n "
-        "1) Get your shoulders and feet sideways to the net"
-        "2) Put your racket in your right hand and get it back abd below on the right side of your body"
-        "3) Put your left arm out in front of you at a 45° angle"
-        "4) Swing low to high, catch your racket with your left hand and follow through over your left shoulder!"
-        "Congrats, now you know how to hit a forehand!"]],
+        "1) Get your shoulders and feet sideways to the net\n"
+        "2) Put your racket in your right hand and get it back abd below on the right side of your body\n"
+        "3) Put your left arm out in front of you at a 45° angle\n"
+        "4) Swing low to high, catch your racket with your left hand and follow through over your left shoulder\n!"
+        "Congrats, now you know how to hit a forehand!\n"
+    ]],
+
+    [r"(.*) forehand grip (.*)| (.*) grip (.*) forehand (.*)", [
+        "To get the correct grip for a beginner forehand, you must put your index knuckle on the thick, flat side of the grip and hold it comfortably"
+        "so that when you get your racket back, the face of the racket is perpindicular to the ground."
+    ]],
+
+    # Backhand
+    [r"how (.*) backhand", [
+        "Let's break down the backhand into simpler steps so it's easy to understand!:\n "
+        "1) Get your shoulders and feet sideways to the net\n"
+        "2) Hold the racket with your right hand like your shaking hands with it or hammering a nail\n"
+        "3) Put your left hand on top of your right hand, with the left index knuckle on the fat, flat side of the grip\n"
+        "4) Put your racket back and below by your left hip!\n"
+        "5) Swing from low to high, feeling your left hand doing most of the work and follow through over your right shoulder!\n"
+        "Congrats, now you know how to hit a basic backhand :)"
+    ]],
+
+    
 ]
 
 # Define the chatbot class
