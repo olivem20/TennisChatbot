@@ -16,17 +16,17 @@ pairs = [
     [r"can you help me with (.*)", ["Sure, I can help you with %1. Please provide more details.",]],
     [r"sorry (.*)", ["It's okay. How can I assist you?",]],
     [r"thank you|thanks", ["You're welcome!", "No problem!", "Happy to help!"]],
-    [r"quit", ["Bye! Have a great day!", "Goodbye!"]],
-    [r"(.*)", ["I'm sorry, I don't understand that. Can you rephrase?", "Could you please elaborate on that?"]],
-    
-    # Forehand
-    [r"(.*) how (.*) forehand (.*)", [
+
+
+    # Forehands
+    [r"(.*) how (.*) forehand", [
         "You can break the forehand down into 4 simple steps:\n "
         "1) Get your shoulders and feet sideways to the net\n"
         "2) Put your racket in your right hand and get it back abd below on the right side of your body\n"
         "3) Put your left arm out in front of you at a 45° angle\n"
-        "4) Swing low to high, catch your racket with your left hand and follow through over your left shoulder\n!"
-        "Congrats, now you know how to hit a forehand!\n"
+        "4) Swing low to high, catch your racket with your left hand and follow through over your left shoulder!\n"
+        "Congrats, now you know how to hit a forehand!\n"quit
+        
     ]],
 
     [r"(.*) forehand grip (.*)| (.*) grip (.*) forehand (.*)", [
@@ -64,6 +64,12 @@ pairs = [
         "For a BH volley, keep the same idea. Use your two handed backhand grips and punch the ball towards your target but letting your left hand guide the shot.\n"
         "You now know how to hit volleys as a beginner!"
     ]],
+
+    # Other
+    [r"can you help me with (.*)", ["Sure, I can help you with %1 in tennis. Please provide more details.",]],
+    [r"sorry (.*)", ["It's okay. How can I assist you with tennis?",]],
+    [r"quit", ["Bye! Keep improving your game!", "Goodbye! See you on the court!"]],
+    [r"(.*)", ["I'm sorry, I don't understand that. Can you rephrase?", "Could you please elaborate on that?"]]
     
 ]
 
@@ -80,11 +86,11 @@ chatbot = RuleBasedChatbot(pairs)
 
 # Function to chat with the bot
 def chat_with_bot():
-    print("Hi, I'm your AI Tennis Coach! What can I help you with? Type 'quit' to exit.")
+    print("🎾Hi, I'm your AI Tennis Coach! What can I help you with? Type 'quit' to exit.")
     while True:
         user_input = input("You: ")
         if user_input.lower() == 'quit':
-            print("Chatbot: Bye! Have a great day!")
+            print("Chatbot: Bye! Keep improving your game! 🎾")
             break
         response = chatbot.respond(user_input)
         print(f"Coach: {response}")
